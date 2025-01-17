@@ -1,147 +1,164 @@
-# End-to-End-Chest-Cancer-Classification-using-MLflow-DVC
+# 🩺 End-to-End Chest Cancer Classification using MLflow and DVC
 
+![GitHub last commit](https://img.shields.io/github/last-commit/tejred213/Chest-Cancer-Prediction-using-ML-Flow-DVC?style=for-the-badge&logo=github&logoColor=white)
+![GitHub repo size](https://img.shields.io/github/repo-size/tejred213/Chest-Cancer-Prediction-using-ML-Flow-DVC?style=for-the-badge&logo=github&logoColor=white)
+![GitHub issues](https://img.shields.io/github/issues/tejred213/Chest-Cancer-Prediction-using-ML-Flow-DVC?style=for-the-badge&logo=github&logoColor=white)
+![GitHub license](https://img.shields.io/github/license/tejred213/Chest-Cancer-Prediction-using-ML-Flow-DVC?style=for-the-badge&logo=github&logoColor=white)
 
-## Workflows
+---
 
-1. Update config.yaml
-2. Update secrets.yaml [Optional]
-3. Update params.yaml
-4. Update the entity
-5. Update the configuration manager in src config
-6. Update the components
-7. Update the pipeline 
-8. Update the main.py
-9. Update the dvc.yaml
+## 🌟 **Overview**
 
+This project provides a complete solution for classifying chest cancer images using a **Convolutional Neural Network (CNN)**. Key features include:
 
+- **MLflow**: Experiment tracking and model management.
+- **DVC**: Data and model version control.
+- **Docker & Flask**: Seamless deployment capabilities.
 
+🔗 **Live Demo**: _Coming Soon_
 
+---
 
-## MLflow
+## 📑 **Table of Contents**
 
-- [Documentation](https://mlflow.org/docs/latest/index.html)
+1. [Project Highlights](#-project-highlights)
+2. [Technologies Used](#-technologies-used)
+3. [Setup Instructions](#-setup-instructions)
+4. [Usage Guide](#-usage-guide)
+5. [Model Training](#-model-training)
+6. [Evaluation Metrics](#-evaluation-metrics)
+7. [Deployment](#-deployment)
+8. [Contributing](#-contributing)
+9. [License](#-license)
 
-- [MLflow tutorial](https://youtube.com/playlist?list=PLkz_y24mlSJZrqiZ4_cLUiP0CBN5wFmTb&si=zEp_C8zLHt1DzWKK)
+---
 
-##### cmd
-- mlflow ui
+## 🚀 **Project Highlights**
 
-### dagshub
-[dagshub](https://dagshub.com/)
+- **End-to-End Pipeline**: Includes everything from preprocessing to deployment.
+- **Efficient Experimentation**: Leverages MLflow to track metrics and artifacts.
+- **Version Control**: DVC ensures robust data and model tracking.
+- **Extensible Design**: Modular architecture for adding features.
+- **Deployment-Ready**: Pre-built Dockerized Flask app for production.
 
-MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/chest-Disease-Classification-MLflow-DVC.mlflow \
-MLFLOW_TRACKING_USERNAME=entbappy \
-MLFLOW_TRACKING_PASSWORD=6824692c47a4545eac5b10041d5c8edbcef0 \
-python script.py
+---
 
-Run this to export as env variables:
+## 💻 **Technologies Used**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white)
+![DVC](https://img.shields.io/badge/DVC-945DD6?style=for-the-badge&logo=dvc&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
+---
+
+## 🛠️ **Setup Instructions**
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/DevanshuSurana/End-to-End-Chest-Cancer-Classification-using-MLflow-DVC.git
+   cd Chest-Cancer-Prediction-using-ML-Flow-DVC
+   ```
+
+2. **Set up Virtual Environment (MacOS):**
+
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+   For **Windows**:
+
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate
+   ```
+
+3. **Install Dependencies:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Pull Data and Models:**
+
+   ```bash
+   dvc pull
+   ```
+
+5. **Configure MLflow:**
+
+   Update `config.yaml` with your MLflow server details.
+
+---
+
+## 🧑‍🔬 **Usage Guide**
+
+- **Prepare Data:**  
+  Ensure your dataset follows the required structure and update paths in `params.yaml`.
+
+- **Run Training Pipeline:**
+
+  ```bash
+  python main.py
+  ```
+
+- **Visualize Results:**  
+  Track metrics and artifacts in the **MLflow UI**.
+
+---
+
+## 📊 **Model Training**
+
+Execute the training pipeline:
 
 ```bash
-
-export MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/chest-Disease-Classification-MLflow-DVC.mlflow
-
-export MLFLOW_TRACKING_USERNAME=entbappy 
-
-export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9353c5b10041d5c8edbcef0
-
+python main.py
 ```
 
+🎯 **Key Features:**
 
+- Automated preprocessing.
+- CNN model training.
+- Experiment tracking with MLflow.
 
-### DVC cmd
+---
 
-1. dvc init
-2. dvc repro
-3. dvc dag
+## 📈 **Evaluation Metrics**
 
+Model performance metrics, such as **accuracy**, **precision**, and **recall**, are logged to:
 
-## About MLflow & DVC
+- `scores.json`: A summary of evaluation results.
+- MLflow UI: Visualize performance trends.
 
-MLflow
+---
 
- - Its Production Grade
- - Trace all of your expriements
- - Logging & taging your model
+## 🚢 **Deployment**
 
+Deploy the trained model using Flask:
 
-DVC 
+```bash
+python app.py
+```
 
- - Its very lite weight for POC only
- - lite weight expriements tracker
- - It can perform Orchestration (Creating Pipelines)
+Access the web application at `http://localhost:5000`.
 
+---
 
+## 🤝 **Contributing**
 
-# AWS-CICD-Deployment-with-Github-Actions
+We ❤️ contributions! Here's how you can help:
 
-## 1. Login to AWS console.
+1. Fork the repository.
+2. Create a new feature branch.
+3. Submit a pull request.
 
-## 2. Create IAM user for deployment
+---
 
-	#with specific access
+## 📜 **License**
 
-	1. EC2 access : It is virtual machine
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
-	2. ECR: Elastic Container registry to save your docker image in aws
-
-
-	#Description: About the deployment
-
-	1. Build docker image of the source code
-
-	2. Push your docker image to ECR
-
-	3. Launch Your EC2 
-
-	4. Pull Your image from ECR in EC2
-
-	5. Lauch your docker image in EC2
-
-	#Policy:
-
-	1. AmazonEC2ContainerRegistryFullAccess
-
-	2. AmazonEC2FullAccess
-
-	
-## 3. Create ECR repo to store/save docker image
-    - Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/chicken
-
-	
-## 4. Create EC2 machine (Ubuntu) 
-
-## 5. Open EC2 and Install docker in EC2 Machine:
-	
-	
-	#optinal
-
-	sudo apt-get update -y
-
-	sudo apt-get upgrade
-	
-	#required
-
-	curl -fsSL https://get.docker.com -o get-docker.sh
-
-	sudo sh get-docker.sh
-
-	sudo usermod -aG docker ubuntu
-
-	newgrp docker
-	
-# 6. Configure EC2 as self-hosted runner:
-    setting>actions>runner>new self hosted runner> choose os> then run command one by one
-
-
-# 7. Setup github secrets:
-
-    AWS_ACCESS_KEY_ID=
-
-    AWS_SECRET_ACCESS_KEY=
-
-    AWS_REGION = us-east-1
-
-    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
-
-    ECR_REPOSITORY_NAME = simple-app
-
+---
